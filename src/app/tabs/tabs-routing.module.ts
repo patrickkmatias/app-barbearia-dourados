@@ -16,15 +16,23 @@ const routes: Routes = [
         loadChildren: () => import('../pg/agende/agende.module').then( m => m.AgendePageModule)
       },
       {
+        path: 'login',
+        loadChildren: () => import('../pg/login/login.module').then( m => m.LoginPageModule)
+      },
+      {
+        path: 'cadastro',
+        loadChildren: () => import('../pg/cadastro/cadastro.module').then( m => m.CadastroPageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/pg/home',
+        redirectTo: '/tabs/pg/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/pg/home',
+    redirectTo: '/tabs/pg/login',
     pathMatch: 'full'
   }
 ];

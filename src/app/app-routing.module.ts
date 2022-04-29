@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'agende',
     loadChildren: () => import('./pg/agende/agende.module').then( m => m.AgendePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pg/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'cadastro',
+    loadChildren: () => import('./pg/cadastro/cadastro.module').then( m => m.CadastroPageModule)
   }
 ];
 @NgModule({
