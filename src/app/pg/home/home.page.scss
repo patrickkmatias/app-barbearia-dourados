@@ -1,0 +1,53 @@
+
+
+h1
+{
+    position: relative;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 1.7em;
+    z-index: 1;
+}
+h1::before
+{
+    content: "";
+    position: absolute;
+    left: -150px;
+    top: -9px;
+    width: 460px;
+    height: 80px;
+    transform: skew(-30deg);
+    background: #202020;
+    z-index: -1;
+}
+span
+{
+    color: var(--ion-color-primary);
+}
+ion-avatar
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5% 0 2% 0;
+}
+ion-avatar img
+{
+    border: solid 5px;
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 5px 50px black;
+}
+.textoCadastro
+{
+    position: relative;
+    left: 2px;
+
+    text-align: center;
+    font-style: italic;
+    font-size: 1em;
+    opacity: .7;
+}
+ion-button
+{
+    font-weight: 600;
+}
