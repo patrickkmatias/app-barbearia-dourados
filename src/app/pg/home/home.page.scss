@@ -6,6 +6,7 @@ h1
     font-family: var(--font-title);
     font-weight: 800;
     font-size: 1.7em;
+    white-space: nowrap;
     z-index: 1;
 }
 h1::before
