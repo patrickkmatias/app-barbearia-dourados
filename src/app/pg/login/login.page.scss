@@ -20,3 +20,57 @@ a
     color: white;
     opacity: .7;
 }
+#login
+{
+    --background: transparent;
+}
+#login ion-content
+{
+    --background: transparent;
+}
+#login .campo
+{
+    width: 270px;
+    height: 50px;
+    margin: 30px auto;
+
+    
+    --border-radius: 27px;
+   
+    overflow: visible;
+}
+#login .titleCampo
+{
+    position: relative;
+    top: -30px;
+
+    font-size: 1.1em;
+}
+
+#login .semCadastro
+{
+    position: relative;
+    left: .5em;
+}
+.semCadastro #login p 
+{
+    
+    text-align: right;
+}
+.semCadastro p span
+{
+    color: var(--ion-color-primary);
+}
+#seta
+{
+    width: 1em;
+    height: 1em;
+    margin-left: 5px;
+
+    filter: invert(62%) sepia(46%) saturate(508%) hue-rotate(359deg) brightness(103%) contrast(99%);
+}
+#login ion-button
+{
+    font-weight: 600;
+    margin-top: 0;
+}
