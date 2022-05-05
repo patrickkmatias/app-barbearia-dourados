@@ -2,23 +2,76 @@
 
 <ion-content>
 
-    <ion-row class="ion-justify-content-center">
-        <ion-col size="9">
-            <h1>FAÇA LOGIN E GANHE <br><span>DESCONTOS</span></h1>
-        </ion-col>
-    </ion-row>
+    <!-- Começo perfil -->
+    <ion-grid id="perfil">
+        <ion-row class=" ion-justify-content-center">
+            <ion-col size="9">
+                <h1 class="title">FAÇA LOGIN E GANHE <br><span>DESCONTOS</span></h1>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-avatar>
+                <img src="../../../assets/icon/iconAvatar.png" />
+            </ion-avatar>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12"><p class="textoCadastro">Faz um cadastro aí campeão, <br><span>é simples!</span></p></ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button fill="outline" shape="round">fazer cadastro</ion-button>
+        </ion-row>
+    </ion-grid>
+    <!-- Fim perfil -->
+    <hr>
+    <!-- Começo conheça seu barbeiro -->
+    <ion-grid id="barbeiros">
+        <!-- Titulo -->
+        <ion-row class=" ion-justify-content-center">
+            <ion-col size="9">
+                <h1 class="title">CONHEÇA SEU <br><span>BARBEIRO</span></h1>
+            </ion-col>
+        </ion-row>
 
-    <ion-row class="ion-justify-content-center">
-        <ion-avatar>
-            <img src="../../../assets/icon/iconAvatar.png" />
-        </ion-avatar>    
-    </ion-row>
+        <ion-img class="fundo" src="../../../assets/fundoBarbeiros.png"></ion-img>
 
-    <ion-row>
-        <ion-col size="12"><p class="textoCadastro">Faz um cadastro aí campeão, <br><span>é simples!</span></p></ion-col>
-    </ion-row>
-    <ion-row class="ion-justify-content-center">
-        <ion-button fill="outline" shape="round">fazer cadastro</ion-button>
-    </ion-row>
+        <!-- Avatar -->
+        <ion-row class="avatarBarbeiro ion-justify-content-center">
+            <ion-col size="5">
+                <ion-avatar>
+                    <img src="../../../assets/icon/iconAvatar.png" />
+                </ion-avatar>
+            </ion-col>
 
+            <ion-col class="ion-text-center" size="5">
+                <div class="nomeBarbeiro">
+                    <h3>André Luiz</h3>
+                    <div>
+                        <ion-icon slot="start" name="star"></ion-icon>
+                        <ion-icon slot="start" name="star"></ion-icon>
+                        <ion-icon slot="start" name="star"></ion-icon>
+                        <ion-icon slot="start" name="star-half"></ion-icon>
+                        <ion-icon slot="start" name="star-outline"></ion-icon>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <!-- Descrição -->
+        <ion-row class="ion-justify-content-center">
+            <p class="descBarbeiro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corporis, aut velit nemo ratione, eveniet inventore iste at iure</p>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-end">
+            <div id="slider">
+                <ion-img src="../../../assets/sliderBarbeiro01.jpg"></ion-img>
+            </div>
+        </ion-row>
+
+        <ion-button class="btn" (click)="onClick()" expand="full">
+            Click me
+        </ion-button>
+    
+    </ion-grid>
+    <!-- Fim conheça seu barbeiro -->
+    
 </ion-content>
