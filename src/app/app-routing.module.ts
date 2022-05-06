@@ -29,7 +29,15 @@ const routes: Routes = [
   {
     path: 'perfil-barbeiro',
     loadChildren: () => import('./pg/perfil-barbeiro/perfil-barbeiro.module').then( m => m.PerfilBarbeiroPageModule)
+  },  {
+    path: 'calendario',
+    loadChildren: () => import('./pg/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'perfil-usuario',
+    loadChildren: () => import('./pg/perfil-usuario/perfil-usuario.module').then( m => m.PerfilUsuarioPageModule)
   }
+
 ];
 @NgModule({
   imports: [
