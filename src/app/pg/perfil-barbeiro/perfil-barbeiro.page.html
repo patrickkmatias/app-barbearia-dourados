@@ -1,26 +1,26 @@
 <ion-content>
   <ion-grid class="ion-no-padding">
-
+    <!-- Avatar barbeiro -->
     <ion-row class="ion-justify-content-center">
       <ion-col class="perfilBarbeiro">
-
-        <ion-avatar class="avatarBarbeiro">
+        <ion-avatar class="avatar">
             <img src="../../../assets/icon/iconAvatar.png" />
         </ion-avatar>
 
         <div>
-          <h3 class="nomeBarbeiro">André Luiz</h3>
+          <h3 class="nome">André Luiz</h3>
         </div>
-
       </ion-col>
     </ion-row>
 
+    <!-- Texto descritivo do barbeiro -->
     <ion-row class="ion-justify-content-center">
-      <ion-col class="textoBarbeiro" size="9">
+      <ion-col class="texto" size="9">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit itaque accusantium ducimus mollitia repellat odio provident aliquid praesentium quibusdam sed nobis dicta corporis ipsam, laborum consequuntur eligendi excepturi deleniti? Nam!</p>
       </ion-col>
     </ion-row>
 
+    <!-- Sliders do perfil -->
     <ion-row class="ion-justify-content-center">
       <ion-col class="fundoSlider sliderPerfilBarbeiro" size="10">
         <ion-img src="../../../assets/sliderBarbeiro01.jpg"></ion-img>
@@ -30,14 +30,119 @@
 
   </ion-grid>
 
-  <ion-grid>
+  <!-- Avaliações -->
+  <ion-grid class="ion-no-padding">
 
     <ion-row class="ion-justify-content-center">
       <ion-button href="/tabs/pg/agende" fill="solid" shape="round">agendar</ion-button>
     </ion-row>
 
     <ion-row class="ion-justify-content-center">
-      <h3 class="nomeBarbeiro">Avaliações</h3>
+      <h3 class="nome">Avaliações</h3>
     </ion-row>
+
+    <!-- Comentários -->
+    <ion-row class="comentario ion-justify-content-center">
+      <!-- Imagem perfil comentário -->
+      <ion-col size="3">
+        <ion-avatar class="avatar">
+          <img src="../../../assets/icon/iconAvatar.png" />
+        </ion-avatar>
+      </ion-col>
+
+      <ion-col>
+          <ion-col class="texto" size="9">
+                      
+            <div class="nome">
+                <!-- Nome usuário -->
+                <ion-row class="ion-justify-content-between">
+                  <h3>Patrick</h3>
+                  <span>06/05/2022</span>
+                </ion-row><!-- fim nome -->
+
+                <div><!-- estrelas -->
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star-half"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star-outline"></ion-icon>
+                </div><!-- fim estrelas -->
+            </div>
+            
+            <p>esse é o brabo dos cortes. sangue bom</p>
+          </ion-col>
+      </ion-col>
+    </ion-row>
+
+    
+
+    <ion-row class="comentario ion-justify-content-center">
+      <!-- Imagem perfil comentário -->
+      <ion-col size="3">
+        <ion-avatar class="avatar">
+          <img src="../../../assets/icon/iconAvatar.png" />
+        </ion-avatar>
+      </ion-col>
+
+      <ion-col>
+          <ion-col class="texto" size="9">
+                      
+            <div class="nome">
+                <!-- Nome usuário -->
+                <ion-row class="ion-justify-content-between">
+                  <h3>Pedro</h3>
+                  <span>06/05/2022</span>
+                </ion-row><!-- fim nome -->
+
+                <div><!-- estrelas -->
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star-half"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star-outline"></ion-icon>
+                </div><!-- fim estrelas -->
+            </div>
+            
+            <p>corta mt slk mão de tesoura</p>
+          </ion-col>
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-row class="comentario ion-justify-content-center">
+      <!-- Imagem perfil comentário -->
+      <ion-col size="3">
+        <ion-avatar class="avatar">
+          <img src="../../../assets/icon/iconAvatar.png" />
+        </ion-avatar>
+      </ion-col>
+
+      <ion-col>
+          <ion-col class="texto" size="9">
+                      
+            <div class="nome">
+                <!-- Nome usuário -->
+                <ion-row class="ion-justify-content-between">
+                  <h3>Genisvaldo</h3>
+                  <span>06/05/2022</span>
+                </ion-row><!-- fim nome -->
+
+                <div><!-- estrelas -->
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star-half"></ion-icon>
+                    <ion-icon size="small" slot="start" name="star-outline"></ion-icon>
+                </div><!-- fim estrelas -->
+            </div>
+            
+            <p>O melhor da região, saí de lá douradasso!</p>
+          </ion-col>
+      </ion-col>
+    </ion-row>
+
+
   </ion-grid>
+  <div class="block"></div>
 </ion-content>
