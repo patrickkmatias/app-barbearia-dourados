@@ -24,6 +24,14 @@ const routes: Routes = [
         loadChildren: () => import('../pg/cadastro/cadastro.module').then( m => m.CadastroPageModule)
       },
       {
+        path: 'lista-barbeiros',
+        loadChildren: () => import('../pg/lista-barbeiros/lista-barbeiros.module').then( m => m.ListaBarbeirosPageModule)
+      },
+      {
+        path: 'perfil-barbeiro',
+        loadChildren: () => import('../pg/perfil-barbeiro/perfil-barbeiro.module').then( m => m.PerfilBarbeiroPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/pg/login',
         pathMatch: 'full'
