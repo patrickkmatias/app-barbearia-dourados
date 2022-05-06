@@ -61,14 +61,25 @@
             <p class="descBarbeiro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corporis, aut velit nemo ratione, eveniet inventore iste at iure</p>
         </ion-row>
 
-        <ion-row class="ion-justify-content-end">
-            <div id="slider">
-                <ion-img src="../../../assets/sliderBarbeiro01.jpg"></ion-img>
-            </div>
+        <ion-row>
+            <ion-col class="nopadding">
+                <ion-slides id="slider" pager="false">
+                    <ion-slide>
+                        <ion-img src="../../../assets/sliderBarbeiro01.jpg"></ion-img>
+                    </ion-slide>
+                    <ion-slide>
+                        <ion-img src="../../../assets/sliderBarbeiro02.jpg"></ion-img>
+                    </ion-slide>
+                    <ion-slide>
+                        <ion-img src="../../../assets/sliderBarbeiro03.jpg"></ion-img>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
         </ion-row>
 
-        <ion-button class="btn" (click)="onClick()" expand="full">
-            Click me
+        <ion-button href="/tabs/pg" class="btn" expand="full">
+            ver todos os barbeiros
+            <ion-icon class="seta" size="small" name="chevron-forward-outline"></ion-icon>
         </ion-button>
     
     </ion-grid>

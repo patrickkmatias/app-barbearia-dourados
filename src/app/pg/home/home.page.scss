@@ -74,8 +74,8 @@ hr
 #barbeiros .fundo
 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 94px;
+    left: -2px;
     z-index: -1;
 
     width: 220px;
@@ -83,7 +83,8 @@ hr
 }
 #barbeiros .avatarBarbeiro
 {
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 #barbeiros ion-avatar
 {
@@ -114,6 +115,7 @@ hr
     width: 290px;
     height: 100px;
     padding: 10px;
+    margin-bottom: 0;
     position: relative;
     top: 0;
     left: 0;
@@ -140,14 +142,41 @@ hr
 #barbeiros #slider
 {
     margin-right: 8vw;
+    position: relative;
+    top: 0%;
+    left: 30%;
 }
+.nopadding{padding: 0;}
 #barbeiros ion-img
 {
-    width: 110px;
-    height: 110px;
+    width: 125px;
+    height: 125px;
 }
 
 .btn
 {
+    width: auto;
+    height: 80px;
     margin: 0;
+    text-transform: lowercase;
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+    font-size: 1em;
+    font-weight: 400;
+    color: #ffffffbe !important;
+    --background: #202020;
+}
+.btn .seta
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    color: #ffffffbe !important;
+    --ionicon-stroke-width: 2px;
 }
