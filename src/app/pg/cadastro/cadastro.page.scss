@@ -1,0 +1,51 @@
+
+.avatarBox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.avatarBox>h3
+{
+    font-size: 1.3em;
+    margin: 5% auto;
+
+    & span{
+        font-size: .8em;
+        font-weight: 100;
+    }
+}
+
+ion-avatar
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 20% 0 2% 0;
+}
+ion-avatar img
+{
+    border: solid 5px;
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 5px 50px black;
+}
+.campo
+{
+    width: 270px;
+    height: 50px;
+    margin: 30px auto 40px auto;
+
+    
+    --border-radius: 27px;
+   
+    overflow: visible;
+}
+.titleCampo
+{
+    position: relative;
+    top: -30px;
+
+    font-size: 1.1em;
+}
