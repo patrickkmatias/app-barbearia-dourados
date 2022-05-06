@@ -41,12 +41,15 @@ ion-img
     height: auto;
 
     position: relative;
-    
 }
+
+a{text-decoration: none; color: white;}
+.servico:nth-child(1)
+{margin-top: 20% !important;}
 
 .servico
 {
-    width: 350px;
+    width: 90vw;
     height: fit-content;
 
     background-color: #202020;
@@ -56,8 +59,6 @@ ion-img
 
     & * {margin: 0; padding: 0;}
 }
-.servico:nth-child(1)
-{margin-top: 20% !important;}
 .servico div
 {
     width: 100%;
@@ -83,6 +84,8 @@ ion-img
     margin-top: 3%;
     font-size: .8em;
 
+    opacity: .8;
+    text-align: justify;
     letter-spacing: 1px;
     line-height: 1.5em;
 }
