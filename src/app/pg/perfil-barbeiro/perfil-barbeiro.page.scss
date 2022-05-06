@@ -1,0 +1,79 @@
+.perfilBarbeiro
+{
+    margin-top: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatarBarbeiro
+{
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+}
+ion-avatar img
+{
+    border: solid 5px;
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 5px 50px black;
+}
+.nomeBarbeiro
+{
+    margin: 10px auto;
+
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+/* fim perfil */
+
+.textoBarbeiro
+{
+    margin: 5% auto 10% auto;
+
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.8em;
+}
+
+.fundoSlider::before
+{
+    content: '';
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-color: #202020;
+    background-position-x: -100px;
+    overflow: visible;
+}
+.sliderPerfilBarbeiro
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: visible;
+}
+.sliderPerfilBarbeiro ion-img
+{
+    width: 125px;
+    height: 125px;
+}
+
+ion-button
+{
+    margin-top: 20%;
+}
