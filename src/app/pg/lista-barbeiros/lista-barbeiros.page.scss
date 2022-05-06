@@ -1,0 +1,55 @@
+a
+{
+    text-decoration: none;
+}
+.avatarBarbeiro:nth-child(1)
+{
+    margin-top: 15%;
+}
+.avatarBarbeiro
+{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+}
+ion-avatar
+{
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+} 
+ion-avatar img
+{
+    border: solid 5px;
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 5px 50px black;
+}
+.nomeBarbeiro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: 1.5em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+ion-icon
+{
+    margin: 3px;
+    color: var(--ion-color-primary);
+}
+.seta
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.seta>ion-icon{color: #ffffffbe;}
