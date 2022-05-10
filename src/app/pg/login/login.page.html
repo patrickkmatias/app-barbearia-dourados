@@ -1,10 +1,16 @@
 <ion-content class="body">
 
+  <video id="video" autoplay loop src="../../../assets/introAppHD.webm"></video>
+  <div class="filter"></div>
+
+
   <ion-img class="ion-align-items-end ion" src="../../../assets/icon/logoDouradosNOBKG.svg"></ion-img>
 
   <ion-row class="ion-align-items-end ion-justify-content-center">
 
-      <ion-button id="trigger">login</ion-button>
+      <ion-row class="ion-justify-content-center">
+        <ion-button id="trigger" fill="solid" shape="round">login</ion-button>
+      </ion-row>
 
       <ion-modal id="login" trigger="trigger" [isOpen]="false">
         <ng-template>
