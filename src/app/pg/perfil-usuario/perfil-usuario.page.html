@@ -1,9 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>perfilUsuario</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="perfil">
+      <ion-avatar class="avatar">
+          <img src="../../../assets/icon/iconAvatar.png" />
+      </ion-avatar>
+
+      <div>
+        <h3 class="nome">Patrick Matias</h3>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="call-outline"></ion-icon>
+      <ion-label>(11) 98160-4266</ion-label>
+      <ion-icon slot="end" name="create-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-label>patrickmatias.silva@hotmail.com</ion-label>
+      <ion-icon slot="end" name="create-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-button fill="solid" shape="round">trocar senha</ion-button>
+  </ion-row>
 
 </ion-content>
+<ion-footer>
+  <p>Membro desde <span>10/05/2022</span></p>
+</ion-footer>

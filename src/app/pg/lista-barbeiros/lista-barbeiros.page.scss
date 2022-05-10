@@ -34,9 +34,23 @@ ion-avatar img
 
     text-align: center;
     font-family: var(--font-title);
-    font-size: 1.5em;
-    font-weight: 500;
     letter-spacing: 2px;
+
+    & h3
+    {
+        font-size: clamp(.8em, 6vw, 22px);
+        font-weight: 500;
+    }
+    & >div
+    {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: fit-content;
+        font-size: clamp(0px, 6vw, 1.5em);
+        white-space: nowrap;
+    }
 }
 ion-icon
 {

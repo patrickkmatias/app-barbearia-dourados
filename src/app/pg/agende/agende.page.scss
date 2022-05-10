@@ -23,6 +23,7 @@ ion-toolbar div
 
     & span{
         opacity: .8;
+        font-size: clamp(.5em, 4vw, 1em);
     }
 }
 ion-title
@@ -32,7 +33,7 @@ ion-title
     padding: 0;
     padding-bottom: 1%;
     font-family: var(--font-title);
-    font-size: 2em;
+    font-size: clamp(.5em, 8vw, 2em);
     letter-spacing: 1.5px;
 }
 ion-img

@@ -1,0 +1,64 @@
+
+.perfil
+{
+    margin-top: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.avatar
+{
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+}
+ion-avatar img
+{
+    border: solid 5px;
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 5px 50px black;
+}
+.nome
+{
+    margin: 10px auto;
+
+    text-align: center;
+    font-family: var(--font-title);
+    font-size: clamp(.8em, 7vw, 1.7em);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+ion-list
+{
+    background: none;
+
+
+    & ion-item
+    {
+        margin: 15px 0;
+        --background: none;
+    }
+}
+
+ion-item ion-icon:nth-child(1)
+{
+    color: var(--ion-color-primary);
+}
+
+p
+{
+    position: relative;
+    bottom: 20vw;
+    margin-left: 10vw;
+
+    color: white;
+    opacity: .9;
+    & span {color:var(--ion-color-primary)}
+}
