@@ -10,20 +10,11 @@ export class HomePage implements OnInit {
 
   slidesFeed = {
     grabCursor: "true",
-    effect: 'creative',
-    creativeEffect:{ /* efeito criativo */
-      prev: {
-        shadow: true,
-        translate: [0, 0, -400]
-      },
-      next: {
-        translate: ['100%', 0, 0]
-      }
-    }, //fim efeito criativo
     autoplay:{
-      delay: 2500,
+      delay: 5500,
       disableOnInteraction: false
     },
+    speed: 2500,
     loop: true
   };
 
