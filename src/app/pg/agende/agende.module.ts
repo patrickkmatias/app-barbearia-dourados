@@ -8,11 +8,14 @@ import { AgendePageRoutingModule } from './agende-routing.module';
 
 import { AgendePage } from './agende.page';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    HttpClientModule,
     AgendePageRoutingModule
   ],
   declarations: [AgendePage]
