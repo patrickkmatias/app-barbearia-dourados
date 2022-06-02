@@ -1,6 +1,6 @@
 <ion-content>
 <!-- Avatar -->
-<a href="/tabs/pg/perfil-barbeiro">
+<a href="/tabs/pg/perfil-barbeiro" *ngFor="let barbeiro of barbeiros">
   <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
     <ion-col offset="1" size="4">
         <ion-avatar>
@@ -10,7 +10,7 @@
   
     <ion-col class="ion-text-center" size="5">
         <div class="nomeBarbeiro">
-            <h3>André Luiz</h3>
+            <h3>{{ barbeiro.nomeFuncionario }}</h3>
             <div>
                 <ion-icon slot="start" name="star"></ion-icon>
                 <ion-icon slot="start" name="star"></ion-icon>
@@ -25,33 +25,6 @@
         <ion-icon size="large" name="chevron-forward-outline"></ion-icon>
     </ion-col>
   </ion-row>
-</a>
-
-<a href="/tabs/pg/perfil-barbeiro">
-    <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
-      <ion-col offset="1" size="4">
-          <ion-avatar>
-              <img src="../../../assets/icon/iconAvatar.png" />
-          </ion-avatar>
-      </ion-col>
-    
-      <ion-col class="ion-text-center" size="5">
-          <div class="nomeBarbeiro">
-              <h3>Paulo Barbosa</h3>
-              <div>
-                  <ion-icon slot="start" name="star"></ion-icon>
-                  <ion-icon slot="start" name="star"></ion-icon>
-                  <ion-icon slot="start" name="star"></ion-icon>
-                  <ion-icon slot="start" name="star-half"></ion-icon>
-                  <ion-icon slot="start" name="star-outline"></ion-icon>
-              </div>
-          </div>
-      </ion-col>
-    
-      <ion-col class="seta ion-text-center">
-          <ion-icon size="large" name="chevron-forward-outline"></ion-icon>
-      </ion-col>
-    </ion-row>
 </a>
 
 
