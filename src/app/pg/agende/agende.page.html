@@ -12,58 +12,19 @@
 
 <ion-content>
     <!-- Item só -->
-    <ion-row class="servico ion-justify-content-center">
+    <ion-row class="servico ion-justify-content-center" *ngFor="let servico of servicos">
         <a href="/tabs/pg/calendario">
             <ion-col size="12">
                 <div>
-                    <h1 class="title">Corte</h1>
-                    <span class="preco">R$ 40,00</span>
+                    <h1 class="title">{{ servico.nomeServico }}</h1>
+                    <span class="preco">{{ servico.valorServico }}</span>
                 </div>
                 <hr>
-                <p>Corte masculino/feminino de cabelo, com todo o charme e qualidade dourados!</p>
+                <p>{{ servico.descricaoServico }}</p>
             </ion-col>
         </a>
     </ion-row>
     <!-- fim Item só -->
-
-    <ion-row class="servico ion-justify-content-center">
-        <a href="/tabs/pg/calendario">
-            <ion-col size="12">
-                <div>
-                    <h1 class="title">Barba</h1>
-                    <span class="preco">R$ 40,00</span>
-                </div>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum cupiditate aliquam, consequuntur sunt perferendis a ratione repudiandae mollitia delectus asperiores laboriosam fugiat alias nobis ab repellendus illum neque quam deleniti.</p>
-            </ion-col>
-        </a>
-    </ion-row>
-
-    <ion-row class="servico ion-justify-content-center">
-        <a href="/tabs/pg/calendario">
-            <ion-col size="12">
-                <div>
-                    <h1 class="title">Progressiva</h1>
-                    <span class="preco">R$ 40,00</span>
-                </div>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius fuga praesentium laborum nesciunt nemo, asperiores maiores iste dicta ullam eos molestias esse quae accusantium et dignissimos similique vitae amet numquam.</p>
-            </ion-col>
-        </a>
-    </ion-row>
-
-    <ion-row class="servico ion-justify-content-center">
-        <a href="/tabs/pg/calendario">
-            <ion-col size="12">
-                <div>
-                    <h1 class="title">Relaxamento</h1>
-                    <span class="preco">R$ 40,00</span>
-                </div>
-                <hr>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed autem voluptates quae velit praesentium reiciendis optio iure unde quo voluptate exercitationem, dignissimos eum sint. Obcaecati voluptas cupiditate laborum possimus quisquam.</p>
-            </ion-col>
-        </a>
-    </ion-row>
 
     <div class="block"></div>
         
