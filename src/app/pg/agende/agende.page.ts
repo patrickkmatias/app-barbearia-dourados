@@ -22,7 +22,7 @@ export class AgendePage implements OnInit {
 
   listarServicos() {
 
-    this.http.get(this.servidorUrl.pegarUrl() + 'lista-servico.php')
+    this.http.get(this.servidorUrl.pegarUrl() + 'agende.php')
     .pipe(map(res => res))
     .subscribe(listaDados => {
       this.servicos = listaDados
