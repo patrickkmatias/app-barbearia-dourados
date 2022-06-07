@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class UrlService {
 
-  url:string = "http://localhost/site-bdourados/admin/"
+  url:string = "https://bdourados.000webhostapp.com/admin/"
 
   constructor() { }
 
