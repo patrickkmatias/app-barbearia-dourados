@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path: 'perfil-usuario',
     loadChildren: () => import('./pg/perfil-usuario/perfil-usuario.module').then( m => m.PerfilUsuarioPageModule)
+  },
+  {
+    path: 'local',
+    loadChildren: () => import('./pg/local/local.module').then( m => m.LocalPageModule)
   }
 
 ];

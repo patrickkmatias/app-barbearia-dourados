@@ -1,4 +1,3 @@
-
 ion-toolbar
 {
     height: 130%;   
@@ -88,4 +87,72 @@ ion-img
 {
     font-size: 1em !important;
 }
+.avatarBarbeiro:nth-child(1)
+{
+    margin-top: 25%;
+}
+.avatarBarbeiro
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
+    overflow: visible;
+    color: white;
+}
+ion-avatar
+{
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+} 
+ion-avatar img
+{
+    border: solid 5px;
+    border-color: var(--ion-color-primary);
+    box-shadow: 0 5px 50px black;
+}
+.nomeBarbeiro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+
+    text-align: center;
+    font-family: var(--font-title);
+    letter-spacing: 2px;
+
+    & h3
+    {
+        font-size: clamp(.8em, 6vw, 1.1em);
+        font-weight: 500;
+    }
+    & >div
+    {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: fit-content;
+        font-size: clamp(0px, 5.5vw, 1em);
+        white-space: nowrap;
+    }
+}
+ion-icon
+{
+    font-size: clamp(0px, 5.5vw, 1em);
+    margin: 3px;
+    color: var(--ion-color-primary);
+}
+.seta
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.seta>ion-icon{color: #ffffffbe;}

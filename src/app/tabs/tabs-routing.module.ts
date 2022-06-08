@@ -32,6 +32,10 @@ const routes: Routes = [
         loadChildren: () => import('../pg/perfil-barbeiro/perfil-barbeiro.module').then( m => m.PerfilBarbeiroPageModule)
       },
       {
+        path: 'local',
+        loadChildren: () => import('../pg/local/local.module').then( m => m.LocalPageModule)
+      },
+      {
         path: 'calendario',
         loadChildren: () => import('../pg/calendario/calendario.module').then( m => m.CalendarioPageModule)
       },
