@@ -28,7 +28,7 @@ const routes: Routes = [
         loadChildren: () => import('../pg/lista-barbeiros/lista-barbeiros.module').then( m => m.ListaBarbeirosPageModule)
       },
       {
-        path: 'perfil-barbeiro',
+        path: 'perfil-barbeiro/:id',
         loadChildren: () => import('../pg/perfil-barbeiro/perfil-barbeiro.module').then( m => m.PerfilBarbeiroPageModule)
       },
       {
