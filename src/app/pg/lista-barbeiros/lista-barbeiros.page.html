@@ -1,6 +1,9 @@
 <ion-content>
+
+    <ion-searchbar placeholder="Buscar barbeiro" showCancelButton="focus" (ionInput)="getItems($event)"></ion-searchbar>
+
 <!-- Avatar -->
-<a href="/tabs/pg/perfil-barbeiro/{{ barbeiro.idFuncionario }}" *ngFor="let barbeiro of barbeiros">
+<a href="/tabs/pg/perfil-barbeiro/{{ barbeiro.idFuncionario }}" *ngFor="let barbeiro of barbeiroItem">
   <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
     <ion-col offset="1" size="4">
         <ion-avatar>
