@@ -21,7 +21,7 @@
   <ion-slides>
 
 
-    <ion-slide>
+    <ion-slide id="semPreferencia">
       <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
         <ion-col size="4">
             <ion-avatar>
@@ -45,7 +45,7 @@
     </ion-slide>
     
 
-    <ion-slide *ngFor="let barbeiro of barbeiros">
+    <ion-slide *ngFor="let barbeiro of barbeiroItem">
       <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
         <ion-col size="4">
             <ion-avatar>
@@ -70,4 +70,7 @@
 
 
   </ion-slides>
+
+  <ion-searchbar placeholder="Buscar barbeiro" showCancelButton="focus" (ionInput)="getItems($event)"></ion-searchbar>
+
 </ion-content>
