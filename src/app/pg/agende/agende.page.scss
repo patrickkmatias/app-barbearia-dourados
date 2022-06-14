@@ -44,9 +44,14 @@ ion-img
     position: relative;
 }
 
+ion-searchbar
+{
+    margin: 15% 0 7% 0;
+    padding: 0 30px;
+    --border-radius: 8vw;
+}
+
 a{text-decoration: none; color: white;}
-.servico:nth-child(1)
-{margin-top: 20% !important;}
 
 .servico
 {

@@ -11,13 +11,16 @@
 </ion-header>
 
 <ion-content>
+
+    <ion-searchbar placeholder="Buscar serviço" showCancelButton="focus" (ionInput)="getItems($event)"></ion-searchbar>
+
     <!-- Item só -->
-    <ion-row class="servico ion-justify-content-center" *ngFor="let servico of servicos">
+    <ion-row class="servico ion-justify-content-center" *ngFor="let servico of servicoItem">
         <a href="/tabs/pg/local">
             <ion-col size="12">
                 <div>
                     <h1 class="title">{{ servico.nomeServico }}</h1>
-                    <span class="preco">R$ {{ servico.valorComma }}</span>
+                    <span class="preco">R$ {{ servico.valorServico }}</span>
                 </div>
                 <hr>
                 <p>{{ servico.descricaoServico }}</p>
