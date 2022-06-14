@@ -15,7 +15,9 @@ export class PerfilBarbeiroPage implements OnInit {
   dadosDetalhe:any;
 
   dados: Array<{
-    nomeFuncionario: any
+    nomeFuncionario: any,
+    descFuncionario: any,
+    fotosPortfolio: any
   }>;
 
   constructor(public dadosUrl: ActivatedRoute, 
@@ -39,7 +41,9 @@ export class PerfilBarbeiroPage implements OnInit {
 
       for(let i = 0; i < this.dadosDetalhe.length; i++){
         this.dados.push({
-          nomeFuncionario:data[i]['nomeFuncionario']
+          nomeFuncionario:data[i]['nomeFuncionario'],
+          descFuncionario:data[i]['descFuncionario'],
+          fotosPortfolio:data[i]['fotosPortfolio']
         })
       }      
     })

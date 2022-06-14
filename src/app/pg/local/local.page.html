@@ -45,7 +45,7 @@
     </ion-slide>
     
 
-    <ion-slide>
+    <ion-slide *ngFor="let barbeiro of barbeiros">
       <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
         <ion-col size="4">
             <ion-avatar>
@@ -55,31 +55,7 @@
     
         <ion-col class="ion-text-center" size="6">
             <div class="nomeBarbeiro">
-                <h3>André Luiz</h3>
-                <div>
-                    <ion-icon slot="start" name="star"></ion-icon>
-                    <ion-icon slot="start" name="star"></ion-icon>
-                    <ion-icon slot="start" name="star"></ion-icon>
-                    <ion-icon slot="start" name="star"></ion-icon>
-                    <ion-icon slot="start" name="star-outline"></ion-icon>
-                </div>
-            </div>
-        </ion-col>
-      </ion-row>
-    </ion-slide>
-
-
-    <ion-slide>
-      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
-        <ion-col size="4">
-            <ion-avatar>
-                <img src="../../../assets/icon/iconAvatar.png" />
-            </ion-avatar>
-        </ion-col>
-    
-        <ion-col class="ion-text-center" size="6">
-            <div class="nomeBarbeiro">
-                <h3>Paulo Barbosa</h3>
+                <h3>{{ barbeiro.nomeFuncionario }}</h3>
                 <div>
                     <ion-icon slot="start" name="star"></ion-icon>
                     <ion-icon slot="start" name="star"></ion-icon>
