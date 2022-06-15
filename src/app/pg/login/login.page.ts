@@ -23,6 +23,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
 
     document.getElementById('ion-tab-bar').style.display = 'none';
+    document.getElementById('video')?.setAttribute('autoplay','true')
 
   }
   

@@ -30,10 +30,11 @@ ion-img
 
     filter: drop-shadow(2px 3px 0px black);
 }
+#logoModal{margin-top: 17vh; margin-bottom: 6vh;}
 
 ion-button
 {
-    margin-top: 30vh;
+    margin-top: 32vh;
     font-weight: 600;
 }
 
@@ -103,4 +104,15 @@ ion-input
 {
     position: relative;
     bottom: 10px;
+}
+.degrade
+{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+
+    background: linear-gradient(0deg, black, transparent);
+    border: none;
+    height: 12vh;
 }
