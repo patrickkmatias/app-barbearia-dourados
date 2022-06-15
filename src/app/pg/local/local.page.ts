@@ -57,13 +57,20 @@ export class LocalPage implements OnInit {
     const val = ev.target.value;
 
     if (val && val.trim() != '') {
+
       this.barbeiroItem = this.barbeiroItemTodos.filter((barbeiros) => {
         return (barbeiros.nomeFuncionario.toLowerCase().indexOf(val.toLowerCase()) > -1);
       });
-      document.getElementById('semPreferencia').classList.add('display-none')
+      
+      if(this.barbeiroItem.length == 0){
+        document.getElementById('semPreferencia').classList.remove('display-none')
+      }else{
+        document.getElementById('semPreferencia').classList.add('display-none')
+      }
 
     } else {
       this.barbeiroItem = this.barbeiroItemTodos
+      
       document.getElementById('semPreferencia').classList.remove('display-none')
     }
 
