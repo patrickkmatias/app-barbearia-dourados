@@ -62,6 +62,7 @@ a
     --border-radius: 27px;
    
     overflow: visible;
+    --highlight-background: var(--ion-color-primary) !important;
 }
 #login .titleCampo
 {
@@ -98,7 +99,7 @@ a
     font-weight: 600;
     margin-top: 0;
 }
-ion-modal ion-input
+ion-input
 {
     position: relative;
     bottom: 10px;

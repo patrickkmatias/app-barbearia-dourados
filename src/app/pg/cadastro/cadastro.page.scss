@@ -41,6 +41,7 @@ ion-avatar img
     --border-radius: 27px;
    
     overflow: visible;
+    --highlight-background: var(--ion-color-primary) !important;
 }
 ion-input
 {
