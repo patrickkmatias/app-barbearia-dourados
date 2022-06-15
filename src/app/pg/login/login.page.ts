@@ -21,6 +21,9 @@ export class LoginPage implements OnInit {
    }
 
   ngOnInit() {
+
+    document.getElementById('ion-tab-bar').style.display = 'none';
+
   }
   
   async logar(){
