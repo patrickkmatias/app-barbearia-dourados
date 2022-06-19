@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UrlService } from '../../servidor/url.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +13,9 @@ export class LoginPage implements OnInit {
 
   email:string;
   senha:string;
+  dadosLogin: any;
 
-  constructor(public servidorUrl: UrlService, public http: HttpClient) {
+  constructor(public servidorUrl: UrlService, public http: HttpClient, public nav: NavController) {
 
     this.email = "patrickmatias.silva@hotmail.com";
     this.senha = "irineu";
@@ -29,7 +31,6 @@ export class LoginPage implements OnInit {
   
   async logar(){
     if(this.email == "" || this.senha == ""){
-      console.log("Preencha todos os campos.");
       
       this.servidorUrl.Alerta('Opa!','Preencha todos os campos.')
 
@@ -39,6 +40,20 @@ export class LoginPage implements OnInit {
       .pipe(map(rep => rep))
       .subscribe(data => {
         
+        this.dadosLogin = data;
+
+        if (this.dadosLogin[0].msg.logado == 'Sim') {
+
+          if (this.dadosLogin[0].Dados.statusCliente == 'ATIVO') {
+            this.servidorUrl.Alerta('Login bem-sucedido.','Pronto pro corte!');
+            this.nav.navigateBack('/tabs/pg/home');
+          }
+          
+        }else{
+
+          this.servidorUrl.Alerta('Opa!','Senha e/ou email/número incorreto!')
+          
+        }
       })
 
     }
