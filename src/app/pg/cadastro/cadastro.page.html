@@ -1,42 +1,43 @@
 <ion-content>
 
-  <ion-row class="ion-justify-content-center">
-    <ion-col class="avatarBox">
-      <ion-avatar>
-          <img src="../../../assets/icon/iconAvatar.png" />
-      </ion-avatar>
-      <h3>Enviar foto <br><span>(opcional)</span></h3>
-    </ion-col>
-  </ion-row>
-
-  <ion-item class="campo">
-    <ion-label class="titleCampo" position="stacked">Nome</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item class="campo">
-    <ion-label class="titleCampo" position="stacked">Celular</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item class="campo">
-    <ion-label class="titleCampo" position="stacked">Email</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item class="campo">
-    <ion-label class="titleCampo" position="stacked">Senha</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-item class="campo">
-    <ion-label class="titleCampo" position="stacked">Repetir senha</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-
-  <ion-row class="ion-justify-content-center">
-    <ion-button href="/tabs/pg/cadastro" fill="solid" shape="round">cadastrar-se</ion-button>
-  </ion-row>
+  <form [formGroup]="cadastro" (ngSubmit)="cadCliente()">
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="avatarBox">
+        <ion-avatar>
+            <img src="../../../assets/icon/iconAvatar.png" />
+        </ion-avatar>
+        <h3>Enviar foto <br><span>(opcional)</span></h3>
+      </ion-col>
+    </ion-row>
+    <ion-item class="campo">
+      <ion-label class="titleCampo" position="stacked">Nome</ion-label>
+      <ion-input type="text" autofocus="true" formControlName="nome" [(ngModel)]="nome">
+      </ion-input>
+    </ion-item>
+    <!-- <ion-item class="campo">
+      <ion-label class="titleCampo" position="stacked">Celular</ion-label>
+      <ion-input type="number" inputmode="numeric" formControlName="celular" [(ngModel)]="celular">
+      </ion-input>
+    </ion-item> -->
+    <ion-item class="campo">
+      <ion-label class="titleCampo" position="stacked">Email</ion-label>
+      <ion-input type="email" inputmode="email" formControlName="email" [(ngModel)]="email">
+      </ion-input>
+    </ion-item>
+    <ion-item class="campo">
+      <ion-label class="titleCampo" position="stacked">Senha</ion-label>
+      <ion-input type="password" formControlName="senha" [(ngModel)]="senha">
+      </ion-input>
+    </ion-item>
+    <!-- <ion-item class="campo">
+      <ion-label class="titleCampo" position="stacked">Repetir senha</ion-label>
+      <ion-input type="password">
+      </ion-input>
+    </ion-item> -->
+    <ion-row class="ion-justify-content-center">
+      <ion-button type="submit" fill="solid" shape="round">cadastrar-se</ion-button>
+    </ion-row>
+  </form>
 
   <div class="block"></div>
 
