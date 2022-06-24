@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UrlService } from '../../servidor/url.service';
+import { UsuarioService } from '../../servidor/usuario.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
@@ -31,7 +32,7 @@ export class HomePage implements OnInit {
     speed: 2500
   }
 
-  constructor(public servidorUrl: UrlService, public http: HttpClient) {
+  constructor(public servidorUrl: UrlService, public http: HttpClient, public usr: UsuarioService) {
     this.listarBarbeiros();
    }
 

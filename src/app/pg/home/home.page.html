@@ -29,11 +29,11 @@
     <ion-grid id="perfil">
         <ion-row class="ion-justify-content-center">
             <ion-avatar>
-                <img src="../../../assets/icon/iconAvatar.png" />
+                <img [src]='this.usr.fotoPerfil()' />
             </ion-avatar>
         </ion-row>
         <ion-row>
-            <ion-col size="12"><p class="textoPerfil logado">Olá, <span>Patrick!</span></p></ion-col>
+            <ion-col size="12"><p class="textoPerfil logado">Olá, <span>{{ this.usr.data[1] }}!</span></p></ion-col>
         </ion-row>
         <ion-row class="ion-justify-content-center">
             <ion-button href="/tabs/pg/perfil-usuario" fill="outline" shape="round">ver perfil</ion-button>
