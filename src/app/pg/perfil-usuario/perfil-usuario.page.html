@@ -2,11 +2,11 @@
   <ion-row class="ion-justify-content-center">
     <ion-col class="perfil">
       <ion-avatar class="avatar">
-          <img src="../../../assets/icon/iconAvatar.png" />
+          <img src="{{ this.url.pegarUrl()+'perfil-cliente/'+this.usr.data[4] }}" />
       </ion-avatar>
 
       <div>
-        <h3 class="nome">Patrick Matias</h3>
+        <h3 class="nome">{{ this.usr.data[1] }}</h3>
       </div>
     </ion-col>
   </ion-row>
@@ -19,7 +19,7 @@
     </ion-item>
     <ion-item>
       <ion-icon slot="start" name="mail-outline"></ion-icon>
-      <ion-label>patrickmatias.silva@hotmail.com</ion-label>
+      <ion-label>{{ this.usr.data[2] }}</ion-label>
       <ion-icon slot="end" name="create-outline"></ion-icon>
     </ion-item>
   </ion-list>
@@ -30,5 +30,5 @@
 
 </ion-content>
 <ion-footer>
-  <p>Membro desde <span>10/05/2022</span></p>
+  <p>Membro desde <span>{{ this.usr.data[5] }}</span></p>
 </ion-footer>
