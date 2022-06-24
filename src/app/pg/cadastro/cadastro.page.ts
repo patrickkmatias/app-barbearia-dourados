@@ -63,10 +63,6 @@ export class CadastroPage implements OnInit {
   };
 
   ngOnInit() {
-
-    if(localStorage.getItem('userLogado') == 'nao'){
-      document.getElementById('ion-tab-bar').style.display = 'none';
-    }
   }
 
 }
