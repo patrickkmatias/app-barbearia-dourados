@@ -70,6 +70,7 @@ export class LoginPage implements OnInit {
     localStorage.setItem('emailCliente', this.dadosLogin[0].Dados.emailCliente);
     localStorage.setItem('statusCliente', this.dadosLogin[0].Dados.statusCliente);
     localStorage.setItem('fotoCliente', this.dadosLogin[0].Dados.fotoCliente);
+    localStorage.setItem('dataCadCliente', this.dadosLogin[0].Dados.dataCadCliente);
     localStorage.setItem('userLogado', 'sim');
   }
 
