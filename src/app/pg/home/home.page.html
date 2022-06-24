@@ -2,8 +2,8 @@
 
 <ion-content>
 
-    <!-- Começo perfil -->
-    <ion-grid id="perfil">
+    <!-- perfil deslogado -->
+    <ion-grid id="perfilDeslogado">
         <ion-row class=" ion-justify-content-center">
             <ion-col size="9">
                 <h1 class="title">FAÇA LOGIN E GANHE <br><span>DESCONTOS</span></h1>
@@ -15,13 +15,28 @@
             </ion-avatar>
         </ion-row>
         <ion-row>
-            <ion-col size="12"><p class="textoCadastro">Faz um cadastro aí campeão, <br><span>é simples!</span></p></ion-col>
+            <ion-col size="12"><p class="textoPerfil">Faz um cadastro aí campeão, <br><span>é simples!</span></p></ion-col>
         </ion-row>
         <ion-row class="ion-justify-content-center">
             <ion-button href="/tabs/pg/cadastro" fill="outline" shape="round">fazer cadastro</ion-button>
         </ion-row>
         <ion-row class="ion-justify-content-center">
             <ion-button href="/tabs/pg/login" fill="clear" shape="round">fazer login</ion-button>
+        </ion-row>
+    </ion-grid>
+
+    <!-- perfil logado -->
+    <ion-grid id="perfil">
+        <ion-row class="ion-justify-content-center">
+            <ion-avatar>
+                <img src="../../../assets/icon/iconAvatar.png" />
+            </ion-avatar>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12"><p class="textoPerfil logado">Olá, <span>Patrick!</span></p></ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+            <ion-button href="/tabs/pg/perfil-usuario" fill="outline" shape="round">ver perfil</ion-button>
         </ion-row>
     </ion-grid>
 
@@ -47,7 +62,7 @@
             </ion-col>
         </ion-row>
     </ion-grid>
-    <!-- Fim perfil -->
+
     <hr>
     <!-- Começo conheça seu barbeiro -->
     <ion-grid id="barbeiros">

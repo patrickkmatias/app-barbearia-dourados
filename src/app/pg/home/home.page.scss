@@ -22,10 +22,6 @@
     background: #202020;
     box-shadow: 0px 2px 7px 0px #000;
 }
-span
-{
-    color: var(--ion-color-primary);
-}
 ion-avatar
 {
     position: relative;
@@ -39,7 +35,7 @@ ion-avatar img
     border-color: var(--ion-color-primary);
     box-shadow: 0 5px 50px black;
 }
-.textoCadastro
+.textoPerfil
 {
     position: relative;
     left: 2px;
@@ -49,6 +45,14 @@ ion-avatar img
     font-size: 1em;
     opacity: .7;
 }
+.textoPerfil.logado
+{
+    font-style:normal; 
+    opacity:1;
+    font-size: 1.2em;
+}
+span{color: var(--ion-color-primary);}
+.textoPerfil.logado span{font-weight: 600;}
 ion-button
 {
     font-weight: 600;
@@ -231,6 +235,7 @@ hr
 .block{background-color: #202020;}
 
 @media (max-width: 375px) {
+    #perfilDeslogado .title::before,
     #perfil .title::before
     {left: 50%; transform: translateX(-50%);}
 

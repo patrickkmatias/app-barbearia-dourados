@@ -36,14 +36,25 @@ export class HomePage implements OnInit {
    }
 
   ngOnInit() {
+    //verificar se está logado para tirar disclaimer para fazer cadastro
+    if(localStorage.getItem('userLogado') == 'sim'){
+
+      document.getElementById('perfilDeslogado').style.display = 'none'
+
+    }else /* resposta nao */{
+
+      document.getElementById('perfil').style.display = 'none'
+
+    }
+
   }
 
   listarBarbeiros() {
 
     this.http.get(this.servidorUrl.pegarUrl() + 'home.php')
     .pipe(map(res => res))
-    .subscribe(listaDados =>{
-      this.barbeiros = listaDados
+    .subscribe(data =>{
+      this.barbeiros = data
     })
 
   }
