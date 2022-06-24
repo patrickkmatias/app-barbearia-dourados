@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { UrlService } from './url.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class UsuarioService {
 
   data: any[]
 
-  constructor() { 
+  constructor(public url: UrlService) { 
     this.data = [];
     this.setValues();
   }
@@ -21,5 +22,15 @@ export class UsuarioService {
       localStorage.getItem('fotoCliente'),
       localStorage.getItem('dataCadCliente'),
     );
+  }
+
+  fotoPerfil(){
+
+    if(this.data[4] == 'cliente/user.png')
+    {
+      return "../../../assets/icon/iconAvatar.png";
+    }else{
+      return this.url.pegarUrl()+'perfil-cliente/'+this.data[4];
+    }
   }
 }

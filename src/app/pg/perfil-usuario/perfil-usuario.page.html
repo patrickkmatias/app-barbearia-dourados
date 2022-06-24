@@ -2,7 +2,7 @@
   <ion-row class="ion-justify-content-center">
     <ion-col class="perfil">
       <ion-avatar class="avatar">
-          <img src="{{ this.url.pegarUrl()+'perfil-cliente/'+this.usr.data[4] }}" />
+          <img [src]='this.usr.fotoPerfil()' />
       </ion-avatar>
 
       <div>
@@ -25,7 +25,11 @@
   </ion-list>
 
   <ion-row class="ion-justify-content-center">
-    <ion-button fill="solid" shape="round">trocar senha</ion-button>
+    <ion-button fill="outline" shape="round">trocar senha</ion-button>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-button fill="clear" shape="round" (click)="logout()">sair</ion-button>
   </ion-row>
 
 </ion-content>
