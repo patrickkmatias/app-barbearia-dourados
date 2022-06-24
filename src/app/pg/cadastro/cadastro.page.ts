@@ -41,10 +41,11 @@ export class CadastroPage implements OnInit {
       this.cadDados(this.cadastro.value).subscribe(
 
         data => {
-          console.log('Teste de cadastro')
+          this.servidorUrl.Alerta('Parabéns!', 'Cadastro realizado com sucesso.');
+          this.nav.navigateBack('/tabs/pg/login');
         },
         err => {
-          console.log('Erro de cadastro')
+          this.servidorUrl.Alerta('Erro', 'Talvez você esteja sem internet, erro ao cadastrar.');
         }
 
       );
@@ -62,6 +63,10 @@ export class CadastroPage implements OnInit {
   };
 
   ngOnInit() {
+
+    if(localStorage.getItem('userLogado') == 'nao'){
+      document.getElementById('ion-tab-bar').style.display = 'none';
+    }
   }
 
 }
