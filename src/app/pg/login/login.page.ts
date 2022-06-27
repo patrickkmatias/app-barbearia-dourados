@@ -49,6 +49,7 @@ export class LoginPage implements OnInit {
         if (this.dadosLogin[0].msg.logado == 'Sim') {
 
           if (this.dadosLogin[0].Dados.statusCliente == 'ATIVO') {
+            document.querySelector('ion-modal').style.display = 'none';
             this.servidorUrl.Alerta('Login bem-sucedido.','Pronto pro corte!');
             this.armazenarLogin();
             this.nav.navigateBack('/tabs/pg/home');
