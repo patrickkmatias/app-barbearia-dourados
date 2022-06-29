@@ -4,52 +4,54 @@
   <div class="filter"></div>
 
 
-  <ion-img class="ion-align-items-end ion" src="../../../assets/icon/logoDouradosNOBKG.svg"></ion-img>
+  <ion-img class="ion-align-items-end fade" src="../../../assets/icon/logoDouradosNOBKG.svg"></ion-img>
 
-  <ion-row class="ion-align-items-end ion-justify-content-center">
+  <ion-row class="ion-align-items-end ion-justify-content-center fade">
 
       <ion-row class="ion-justify-content-center">
-        <ion-button id="trigger" fill="solid" shape="round">login</ion-button>
+        <ion-button id="trigger" fill="solid" shape="round" (click)="setOpen(true)">login</ion-button>
       </ion-row>
 
-      <ion-modal id="login" trigger="trigger" >
-        <ng-template>
-
-          <ion-content>
-
-            <ion-img class="ion-align-items-end ion" id="logoModal" src="../../../assets/icon/logoDouradosNOBKG.svg"></ion-img>
-            
-            <ion-item class="campo">
-              <ion-label class="titleCampo" position="stacked">Número ou e-mail</ion-label>
-              <ion-input type="email" inputmode="email" placeholder="dourados@gmail.com" autofocus="true" [(ngModel)]="email"></ion-input>
-            </ion-item>
-
-            <ion-item class="campo">
-              <ion-label class="titleCampo" position="stacked">Senha</ion-label>
-              <ion-input type="password" inputmode="password" placeholder="●●●●●●●●" [(ngModel)]="senha"></ion-input>
-            </ion-item>
-
-            <ion-row class="semCadastro ion-justify-content-center ion-align-items-center">
-              <a href="/tabs/pg/cadastro">
-                <p>não tem cadastro? <br><span>faça o seu!</span></p>
-              </a>
-              <img id="seta" src="../../../assets/right-arrow.svg" alt="seta para direita">
-            </ion-row>
-
-            <ion-row class="ion-justify-content-center">
-              <ion-button class="btn" fill="outline" shape="round" (click)="logar()">fazer login</ion-button>
-            </ion-row>
-
-          </ion-content>
-
-        </ng-template>
-      </ion-modal>
-
   </ion-row>
-
-  <ion-row class="ion-align-items-end ion-justify-content-center">
+    
+  <ion-row class="ion-align-items-end ion-justify-content-center fade">
     <a href="/tabs/pg/home">entrar sem login</a>
   </ion-row>
-
+    
   <div class="degrade"></div>
+    
 </ion-content>
+
+<ion-modal id="login" trigger="trigger" [isOpen]="isModalOpen">
+  <ng-template>
+
+    <ion-content>
+
+      <ion-img class="ion-align-items-end ion" id="logoModal" src="../../../assets/icon/logoDouradosNOBKG.svg"></ion-img>
+      
+      <ion-item class="campo">
+        <ion-label class="titleCampo" position="stacked">Número ou e-mail</ion-label>
+        <ion-input type="email" inputmode="email" placeholder="dourados@gmail.com" autofocus="true" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="campo">
+        <ion-label class="titleCampo" position="stacked">Senha</ion-label>
+        <ion-input type="password" inputmode="password" placeholder="●●●●●●●●" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+
+      <ion-row class="semCadastro ion-justify-content-center ion-align-items-center">
+        <a href="/tabs/pg/cadastro">
+          <p>não tem cadastro? <br><span>faça o seu!</span></p>
+        </a>
+        <img id="seta" src="../../../assets/right-arrow.svg" alt="seta para direita">
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-button class="btn" fill="outline" shape="round" (click)="logar()">fazer login</ion-button>
+      </ion-row>
+
+    </ion-content>
+
+  </ng-template>
+</ion-modal>
+

@@ -3,6 +3,7 @@ import { UrlService } from '../../servidor/url.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { NavController } from '@ionic/angular';
+import { IonModal } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,12 +15,14 @@ export class LoginPage implements OnInit {
   email:string;
   senha:string;
   dadosLogin: any;
+  isModalOpen = false;
 
   constructor(public servidorUrl: UrlService, public http: HttpClient, public nav: NavController) {
 
     this.email = "patrickmatias.silva@hotmail.com";
     this.senha = "patrikinho123";
 
+    this.fade();
    }
 
   ngOnInit() {
@@ -57,7 +60,16 @@ export class LoginPage implements OnInit {
           
         }else{
 
-          this.servidorUrl.Alerta('Opa!','Senha e/ou email/número incorreto!')
+          if (this.dadosLogin[0].Dados.statusCliente == 'INATIVO') {
+
+            this.servidorUrl.Alerta('Opa!','Seu usuário está inativo, fale com o administrador do sistema!')
+
+          }else{
+            
+            this.servidorUrl.Alerta('Opa!','Senha e/ou email/número incorreto!')
+
+          }
+
           
         }
       })
@@ -73,6 +85,30 @@ export class LoginPage implements OnInit {
     localStorage.setItem('fotoCliente', this.dadosLogin[0].Dados.fotoCliente);
     localStorage.setItem('dataCadCliente', this.dadosLogin[0].Dados.dataCadCliente);
     localStorage.setItem('userLogado', 'sim');
+  }
+
+  async fade(){
+
+    let fadeElements = document.querySelectorAll('.fade');
+
+    // percorre a NodeList, agora array, adicionando display: none a cada elemento.
+
+    if(this.isModalOpen){
+      [].forEach.call(fadeElements, function(element) {
+        element.style.display = 'none';
+      })
+    }
+
+    if(!this.isModalOpen){
+      [].forEach.call(fadeElements, function(element) {
+        element.style.display = 'block';
+      })
+    }
+
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
   }
 
 }
