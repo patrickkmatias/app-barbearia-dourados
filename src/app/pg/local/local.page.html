@@ -18,18 +18,34 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-slides class="local">
+    <ion-slide>
+      <ion-card mode="ios" (click)="selecionarLocal()">
+        <ion-card-content class="ion-no-padding">
+          <ion-img src="../../../assets/local01.jpg"></ion-img>
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-subtitle>Sede</ion-card-subtitle>
+          <ion-card-title>Pimentas</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+
   <ion-slides>
 
 
     <ion-slide id="semPreferencia">
-      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
-        <ion-col size="4">
+      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center" (click)="selecionarBarbeiro()">
+        <ion-col class="ion-no-padding" size="4">
             <ion-avatar>
                 <img src="../../../assets/icon/iconAvatar.png" />
             </ion-avatar>
         </ion-col>
 
-        <ion-col class="ion-text-center" size="6">
+        <ion-col class="ion-no-padding ion-text-center" size="6">
             <div class="nomeBarbeiro">
                 <h3>Sem preferência</h3>
                 <div>
@@ -72,42 +88,7 @@
   </ion-slides>
 
   <ion-searchbar placeholder="Buscar barbeiro" showCancelButton="focus" (ionInput)="getItems($event)"></ion-searchbar>
-
-  <ion-slides>
-    <ion-slide>
-      <ion-card mode="ios">
-        <ion-card-content class="ion-no-padding">
-          <ion-img src="../../../assets/local01.jpg"></ion-img>
-        </ion-card-content>
-        <ion-card-header>
-          <ion-card-subtitle>Sede</ion-card-subtitle>
-          <ion-card-title>Sede Pimentas</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card mode="ios">
-        <ion-card-content class="ion-no-padding">
-          <ion-img src="../../../assets/local01.jpg"></ion-img>
-        </ion-card-content>
-        <ion-card-header>
-          <ion-card-title>São Miguel Paulista</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card mode="ios">
-        <ion-card-content class="ion-no-padding">
-          <ion-img src="../../../assets/local01.jpg"></ion-img>
-        </ion-card-content>
-        <ion-card-header>
-          <ion-card-title>Tatuapé</ion-card-title>
-        </ion-card-header>
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
   
+  <div class="block"></div>
 
 </ion-content>
