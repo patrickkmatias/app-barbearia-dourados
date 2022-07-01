@@ -50,6 +50,7 @@ ion-avatar img
     font-style:normal; 
     opacity:1;
     font-size: 1.2em;
+    text-transform: capitalize;
 }
 span{color: var(--ion-color-primary);}
 .textoPerfil.logado span{font-weight: 600;}
