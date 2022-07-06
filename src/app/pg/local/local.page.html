@@ -62,14 +62,14 @@
     
 
     <ion-slide *ngFor="let barbeiro of barbeiroItem">
-      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center">
+      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center" (click)="selecionarBarbeiro()">
         <ion-col size="4">
             <ion-avatar>
                 <img src="../../../assets/icon/iconAvatar.png" />
             </ion-avatar>
         </ion-col>
     
-        <ion-col class="ion-text-center" size="6">
+        <ion-col class="ion-no-padding ion-text-center" size="6">
             <div class="nomeBarbeiro">
                 <h3>{{ barbeiro.nomeFuncionario }}</h3>
                 <div>
