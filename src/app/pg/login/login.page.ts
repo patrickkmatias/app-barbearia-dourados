@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UrlService } from '../../servidor/url.service';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { NavController } from '@ionic/angular';
-import { IonModal } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { ModalLoginComponent } from 'src/app/componentes/modal-login/modal-login.component';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +15,14 @@ export class LoginPage implements OnInit {
   email:string;
   senha:string;
   dadosLogin: any;
-  isModalOpen = false;
 
-  constructor(public servidorUrl: UrlService, public http: HttpClient, public nav: NavController) {
+  constructor
+  (
+    public servidorUrl: UrlService, 
+    public http: HttpClient, 
+    public nav: NavController,
+    public modalController: ModalController
+  ) {
 
     this.email = "patrickmatias.silva@hotmail.com";
     this.senha = "patrikinho123";
@@ -87,28 +92,48 @@ export class LoginPage implements OnInit {
     localStorage.setItem('userLogado', 'sim');
   }
 
+  async openModal()
+  {
+    let fadeElements = document.querySelectorAll('.fade');
+
+    function fadeOn(){
+      [].forEach.call(fadeElements, function(element) {
+        element.style.display = 'none';
+      })
+    }
+
+    function fadeOff(){
+      [].forEach.call(fadeElements, function(element) {
+        element.style.display = 'block';
+      })
+    }
+    
+    const modal = await this.modalController.create({
+      component: ModalLoginComponent
+    })
+
+    modal.present();
+    fadeOn();
+    
+    const vaiFechar = await modal.onWillDismiss();
+
+    if (vaiFechar)
+    {
+      fadeOff();
+    }
+
+  }
+
   async fade(){
 
     let fadeElements = document.querySelectorAll('.fade');
 
     // percorre a NodeList, agora array, adicionando display: none a cada elemento.
 
-    if(this.isModalOpen){
-      [].forEach.call(fadeElements, function(element) {
-        element.style.display = 'none';
-      })
-    }
+    
 
-    if(!this.isModalOpen){
-      [].forEach.call(fadeElements, function(element) {
-        element.style.display = 'block';
-      })
-    }
+    
 
-  }
-
-  setOpen(isOpen: boolean) {
-    this.isModalOpen = isOpen;
   }
 
 }

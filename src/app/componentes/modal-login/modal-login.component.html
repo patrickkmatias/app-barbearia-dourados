@@ -1,0 +1,28 @@
+
+
+    <ion-content id="login">
+
+      <ion-img class="ion-align-items-end" id="logoModal" src="../../../assets/icon/logoDouradosNOBKG.svg"></ion-img>
+      
+      <ion-item class="campo">
+        <ion-label class="titleCampo" position="stacked">Número ou e-mail</ion-label>
+        <ion-input type="email" inputmode="email" placeholder="dourados@gmail.com" autofocus="true" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="campo">
+        <ion-label class="titleCampo" position="stacked">Senha</ion-label>
+        <ion-input type="password" inputmode="password" placeholder="●●●●●●●●" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+
+      <ion-row class="semCadastro ion-justify-content-center ion-align-items-center">
+        <a href="/tabs/pg/cadastro">
+          <p>não tem cadastro? <br><span>faça o seu!</span></p>
+        </a>
+        <img id="seta" src="../../../assets/right-arrow.svg" alt="seta para direita">
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-button class="btn" fill="outline" shape="round" (click)="logar()">fazer login</ion-button>
+      </ion-row>
+
+    </ion-content>

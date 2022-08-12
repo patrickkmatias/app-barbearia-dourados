@@ -241,6 +241,11 @@
     --ion-card-background: #1e1e1e;
   }
 
+  .md body.dark ion-modal
+  {
+    --ion-background-color: #00000030;
+  }
+
   .block
   {
       width: 100%;

@@ -1,0 +1,114 @@
+
+#video
+{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -10;
+    
+    box-sizing: border-box;
+}
+.filter
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+        box-shadow: inset 0px 10px 100px 20px #00000088;
+
+}
+
+ion-img
+{
+    width: auto;
+    height: 25%;
+    margin-top: 30vh;
+
+    filter: drop-shadow(2px 3px 0px black);
+}
+#logoModal{margin-top: 17vh; margin-bottom: 6vh;}
+
+ion-button
+{
+    margin-top: 32vh;
+    font-weight: 600;
+}
+
+a
+{
+    margin-top: 2%;
+    text-decoration: none;
+    color: white;
+    opacity: .7;
+}
+#login, ion-modal
+{
+    --ion-background-color: transparent !important;
+}
+#login .campo
+{
+    width: 270px;
+    height: 50px;
+    margin: 30px auto;
+
+    
+    --border-radius: 27px;
+   
+    overflow: visible;
+    --highlight-background: var(--ion-color-primary) !important;
+}
+#login .titleCampo
+{
+    position: relative;
+    top: -30px;
+
+    font-size: 1.1em;
+}
+
+#login .semCadastro
+{
+    position: relative;
+    left: .5em;
+}
+.semCadastro #login p 
+{
+    
+    text-align: right;
+}
+.semCadastro p span
+{
+    color: var(--ion-color-primary);
+}
+#seta
+{
+    width: 1em;
+    height: 1em;
+    margin-left: 5px;
+
+    filter: invert(62%) sepia(46%) saturate(508%) hue-rotate(359deg) brightness(103%) contrast(99%);
+}
+#login ion-button
+{
+    font-weight: 600;
+    margin-top: 0;
+}
+ion-input
+{
+    position: relative;
+    bottom: 10px;
+}
+.degrade
+{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+
+    background: linear-gradient(0deg, black, transparent);
+    border: none;
+    height: 12vh;
+}
