@@ -77,4 +77,11 @@ export class LocalPage implements OnInit {
 
   }
 
+  selecionarLocal() {
+    document.querySelector('ion-card')?.classList.add('selected')
+  }
+
+  selecionarBarbeiro() {
+    document.querySelector('.avatarBarbeiro')?.classList.add('selected')
+  }
 }
