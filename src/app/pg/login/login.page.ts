@@ -94,45 +94,38 @@ export class LoginPage implements OnInit {
 
   async openModal()
   {
+    // functions to fade back elements on and off
     let fadeElements = document.querySelectorAll('.fade');
 
-    function fadeOn(){
+    function fadeOut(){
+      // percorre a NodeList, agora array, adicionando opacity: 0 a cada elemento.
       [].forEach.call(fadeElements, function(element) {
-        element.style.display = 'none';
+        element.style.opacity = '0';
       })
     }
 
-    function fadeOff(){
+    function fadeIn(){
       [].forEach.call(fadeElements, function(element) {
-        element.style.display = 'block';
+        element.style.opacity = '1';
       })
     }
     
+    // constant with the modal component
     const modal = await this.modalController.create({
       component: ModalLoginComponent
     })
 
     modal.present();
-    fadeOn();
+
+    fadeOut();
     
+    // (?) while the function is running, awaits to receive the boolean value
     const vaiFechar = await modal.onWillDismiss();
 
     if (vaiFechar)
     {
-      fadeOff();
+      fadeIn();
     }
-
-  }
-
-  async fade(){
-
-    let fadeElements = document.querySelectorAll('.fade');
-
-    // percorre a NodeList, agora array, adicionando display: none a cada elemento.
-
-    
-
-    
 
   }
 

@@ -22,6 +22,11 @@
 
 }
 
+.fade
+{
+    transition: opacity .3s;
+}
+
 ion-img
 {
     width: auto;
