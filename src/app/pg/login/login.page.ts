@@ -26,8 +26,6 @@ export class LoginPage implements OnInit {
 
     this.email = "patrickmatias.silva@hotmail.com";
     this.senha = "patrikinho123";
-
-    this.fade();
    }
 
   ngOnInit() {
