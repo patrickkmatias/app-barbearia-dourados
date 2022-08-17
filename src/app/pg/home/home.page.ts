@@ -11,7 +11,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomePage implements OnInit {
 
-  barbeiros:any;
+  barbeiro:any;
+  dadosBarbeiro: Array<{
+    nome: any,
+    descricao: any,
+    fotosPortfolio: any,
+    fotoPerfil: any,
+    rep: any
+  }>;
+  
 
   slidesFeed = {
     grabCursor: "true",
@@ -33,7 +41,8 @@ export class HomePage implements OnInit {
   }
 
   constructor(public servidorUrl: UrlService, public http: HttpClient, public usr: UsuarioService) {
-    this.listarBarbeiros();
+    this.listarBarbeiro();
+    this.dadosBarbeiro = [];
    }
 
   ngOnInit() {
@@ -50,13 +59,24 @@ export class HomePage implements OnInit {
 
   }
 
-  listarBarbeiros() {
+  listarBarbeiro() {
 
-    this.http.get(this.servidorUrl.pegarUrl() + 'home.php')
+    this.http.get(this.servidorUrl.pegarUrl() + 'home-barbeiro.php')
     .pipe(map(res => res))
     .subscribe(data =>{
-      this.barbeiros = data
+      this.barbeiro = data;
+
+      this.dadosBarbeiro.push({
+        nome: data[0]['nomeFuncionario'],
+        descricao: data[0]['descFuncionario'],
+        fotosPortfolio: data[0]['fotosPortfolio'],
+        fotoPerfil: data[0]['fotoFuncionario'],
+        rep: data[0]['repFuncionario']
+      })
+
+      console.log(this.dadosBarbeiro)
     })
+    
 
   }
   
