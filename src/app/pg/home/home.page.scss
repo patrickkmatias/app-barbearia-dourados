@@ -167,8 +167,15 @@ hr
     text-align: justify;
     text-overflow: hidden;
     font-size: .8em;
-    line-height: 1.4em;
+    line-height: 1.6em;
     letter-spacing: 1.5px;
+
+    >a
+    {
+        text-align: right;
+        text-decoration: none;
+        color: #cccccc;
+    }
 }
 .descBarbeiro::before
 {

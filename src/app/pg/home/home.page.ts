@@ -17,7 +17,8 @@ export class HomePage implements OnInit {
     descricao: any,
     fotosPortfolio: any,
     fotoPerfil: any,
-    rep: any
+    rep: any,
+    id: number
   }>;
   
 
@@ -39,7 +40,7 @@ export class HomePage implements OnInit {
     },
     speed: 2500
   }
-
+  
   constructor(public servidorUrl: UrlService, public http: HttpClient, public usr: UsuarioService) {
     this.listarBarbeiro();
     this.dadosBarbeiro = [];
@@ -68,10 +69,11 @@ export class HomePage implements OnInit {
 
       this.dadosBarbeiro.push({
         nome: data[0]['nomeFuncionario'],
-        descricao: data[0]['descFuncionario'].slice(0, 120) + "...",
+        descricao: data[0]['descFuncionario'].slice(0, 110).trim() + "... " ,
         fotosPortfolio: data[0]['fotosPortfolio'],
         fotoPerfil: data[0]['fotoFuncionario'],
-        rep: data[0]['repFuncionario']
+        rep: data[0]['repFuncionario'],
+        id: data[0]['idFuncionario']
       })
 
       console.log(this.dadosBarbeiro)
@@ -81,7 +83,7 @@ export class HomePage implements OnInit {
 
   verMais() 
   {
-    
+	
   }
-  
+
 }
