@@ -15,6 +15,8 @@ export class CadastroPage implements OnInit {
   cadastro:any;
   nome:any;
   email:any;
+  ddd: any;
+  celular:any;
   senha:any;
 
   constructor(public servidorUrl: UrlService, 
@@ -25,7 +27,9 @@ export class CadastroPage implements OnInit {
                 this.cadastro = this.formConst.group({
                   nome: ['', Validators.required],
                   email: ['', Validators.required],
-                  senha: ['', Validators.required]
+                  ddd: [''],
+                  celular: [''],
+                  senha: ['', Validators.required],
                 })
 
               }
@@ -34,7 +38,7 @@ export class CadastroPage implements OnInit {
 
     if(this.nome == undefined || this.email == undefined || this.senha == undefined){
 
-      this.servidorUrl.Alerta('Atenção', 'Preencha todos os campos');
+      this.servidorUrl.Alerta('Atenção', 'Preencha todos os campos obrigatórios');
 
     }else{
 

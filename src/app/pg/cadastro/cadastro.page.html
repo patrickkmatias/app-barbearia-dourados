@@ -11,22 +11,28 @@
     </ion-row>
     <ion-item class="campo">
       <ion-label class="titleCampo" position="stacked">Nome</ion-label>
-      <ion-input type="text" autofocus="true" formControlName="nome" [(ngModel)]="nome">
+      <ion-input type="text" autofocus="true" formControlName="nome" [(ngModel)]="nome" placeholder="seu nome completo">
       </ion-input>
     </ion-item>
-    <!-- <ion-item class="campo">
+    <ion-item class="campo">
       <ion-label class="titleCampo" position="stacked">Celular</ion-label>
-      <ion-input type="number" inputmode="numeric" formControlName="celular" [(ngModel)]="celular">
-      </ion-input>
-    </ion-item> -->
+      <ion-row>
+        <ion-col size="2">
+          <ion-input type="number" inputmode="numeric" formControlName="ddd" [(ngModel)]="ddd" placeholder="DDD"></ion-input>
+        </ion-col>
+        <ion-col size="10">
+			<ion-input type="number" inputmode="numeric" formControlName="celular" [(ngModel)]="celular" placeholder="seu número"></ion-input>
+		</ion-col>
+      </ion-row>
+    </ion-item>
     <ion-item class="campo">
       <ion-label class="titleCampo" position="stacked">Email</ion-label>
-      <ion-input type="email" inputmode="email" formControlName="email" [(ngModel)]="email">
+      <ion-input type="email" inputmode="email" formControlName="email" [(ngModel)]="email" placeholder="seu melhor email">
       </ion-input>
     </ion-item>
     <ion-item class="campo">
       <ion-label class="titleCampo" position="stacked">Senha</ion-label>
-      <ion-input type="password" formControlName="senha" [(ngModel)]="senha">
+      <ion-input type="password" formControlName="senha" [(ngModel)]="senha" placeholder="aquela que você não esquece">
       </ion-input>
     </ion-item>
     <!-- <ion-item class="campo">

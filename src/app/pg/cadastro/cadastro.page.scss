@@ -33,7 +33,7 @@ ion-avatar img
 }
 .campo
 {
-    width: 270px;
+    width: 80vw;
     height: 50px;
     margin: 30px auto 40px auto;
 
@@ -47,6 +47,10 @@ ion-input
 {
     position: relative;
     bottom: 10px;
+}
+ion-input.ddd
+{
+    width: 10%;
 }
 .titleCampo
 {
