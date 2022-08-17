@@ -67,10 +67,11 @@
     <!-- Começo conheça seu barbeiro -->
     <ion-grid id="barbeiros">
         <!-- Titulo -->
-        <ion-row class=" ion-justify-content-center">
+        <ion-row class="cabeçalho ion-justify-content-center">
             <ion-col size="9">
                 <h1 class="title">CONHEÇA SEU <br><span>BARBEIRO</span></h1>
             </ion-col>
+            <ion-icon class="refresh" size="large" name="refresh-circle-outline" (click)="refreshBarbeiro()"></ion-icon>
         </ion-row>
 
         <ion-img class="fundo" src="../../../assets/fundoBarbeiros.png"></ion-img>
@@ -85,7 +86,7 @@
 
             <ion-col class="ion-text-center" size="5">
                 <div class="nomeBarbeiro">
-                    <h3>{{ dadosBarbeiro[0]?.nome }}</h3>
+                    <h3>{{ dadosBarbeiro[this.i]?.nome }}</h3>
                     <div>
                         <ion-icon slot="start" name="star"></ion-icon>
                         <ion-icon slot="start" name="star"></ion-icon>
@@ -100,7 +101,7 @@
         <!-- Descrição -->
         <ion-row class="ion-justify-content-center">
             <!-- MÁXIMO 128 CARACTERES -->
-            <p class="descBarbeiro">{{ dadosBarbeiro[0]?.descricao }} <a href="/tabs/pg/perfil-barbeiro/{{ dadosBarbeiro[0]?.id }}">ver mais</a></p>
+            <p class="descBarbeiro">{{ dadosBarbeiro[this.i]?.descricao }} <a href="/tabs/pg/perfil-barbeiro/{{ dadosBarbeiro[this.i]?.id }}">ver mais</a></p>
         </ion-row>
 
         <ion-row class="ion-justify-content-end">

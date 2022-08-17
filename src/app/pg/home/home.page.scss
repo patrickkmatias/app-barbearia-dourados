@@ -99,9 +99,21 @@ hr
     left: 0;
     padding: 0 !important;
 }
+.cabeçalho
+{
+    position: relative;
+    top: 0; left: 0;
+}
 #barbeiros .title::before
 {
     width: 365px;
+}
+#barbeiros .refresh
+{
+    position: absolute;
+    right: 5vw; top: 50%;
+    transform: translateY(-50%);
+    color: #404040;
 }
 #barbeiros .fundo
 {
@@ -158,6 +170,7 @@ hr
     width: 290px;
     height: 100px;
     padding: 10px;
+    margin-top: 0 !important;
     margin-bottom: 0;
     position: relative;
     top: 0;

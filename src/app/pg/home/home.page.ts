@@ -20,6 +20,7 @@ export class HomePage implements OnInit {
     rep: any,
     id: number
   }>;
+  i = 0;
   
 
   slidesFeed = {
@@ -79,6 +80,12 @@ export class HomePage implements OnInit {
       console.log(this.dadosBarbeiro)
     })
 
+  }
+
+  refreshBarbeiro()
+  {
+    this.listarBarbeiro();
+    this.i += 1;
   }
 
   verMais() 
