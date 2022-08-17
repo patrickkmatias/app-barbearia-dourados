@@ -68,7 +68,7 @@ export class HomePage implements OnInit {
 
       this.dadosBarbeiro.push({
         nome: data[0]['nomeFuncionario'],
-        descricao: data[0]['descFuncionario'],
+        descricao: data[0]['descFuncionario'].slice(0, 120) + "...",
         fotosPortfolio: data[0]['fotosPortfolio'],
         fotoPerfil: data[0]['fotoFuncionario'],
         rep: data[0]['repFuncionario']
@@ -76,8 +76,12 @@ export class HomePage implements OnInit {
 
       console.log(this.dadosBarbeiro)
     })
-    
 
+  }
+
+  verMais() 
+  {
+    
   }
   
 }

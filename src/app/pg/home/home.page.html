@@ -85,7 +85,7 @@
 
             <ion-col class="ion-text-center" size="5">
                 <div class="nomeBarbeiro">
-                    <h3>André Luiz</h3>
+                    <h3>{{ dadosBarbeiro[0]?.nome }}</h3>
                     <div>
                         <ion-icon slot="start" name="star"></ion-icon>
                         <ion-icon slot="start" name="star"></ion-icon>
@@ -99,7 +99,8 @@
 
         <!-- Descrição -->
         <ion-row class="ion-justify-content-center">
-            <p class="descBarbeiro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis corporis, aut velit nemo ratione, eveniet inventore iste at iure</p>
+            <!-- MÁXIMO 128 CARACTERES -->
+            <p class="descBarbeiro">{{ dadosBarbeiro[0]?.descricao }}</p>
         </ion-row>
 
         <ion-row class="ion-justify-content-end">
