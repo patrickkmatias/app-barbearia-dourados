@@ -81,7 +81,10 @@ export class LocalPage implements OnInit {
     document.querySelector('ion-card')?.classList.add('selected')
   }
 
-  selecionarBarbeiro() {
-    document.querySelector('.avatarBarbeiro')?.classList.add('selected')
+  selecionarBarbeiro(id:any) {
+    // desativa a seleção de todos e seleciona o último clicado
+    document.querySelectorAll('.avatarBarbeiro')?.forEach(x => x.classList.remove('selected'))
+
+    document.getElementById(id.toString())?.classList.add('selected')
   }
 }

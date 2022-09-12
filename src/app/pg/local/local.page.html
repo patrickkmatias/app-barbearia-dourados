@@ -36,9 +36,8 @@
 
   <ion-slides>
 
-
     <ion-slide id="semPreferencia">
-      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center" (click)="selecionarBarbeiro()">
+      <ion-row id="0" class="avatarBarbeiro ion-justify-content-center ion-align-center" (click)="selecionarBarbeiro(0)">
         <ion-col class="ion-no-padding" size="4">
             <ion-avatar>
                 <img src="../../../assets/icon/iconAvatar.png" />
@@ -62,7 +61,7 @@
     
 
     <ion-slide *ngFor="let barbeiro of barbeiroItem">
-      <ion-row class="avatarBarbeiro ion-justify-content-center ion-align-center" (click)="selecionarBarbeiro()">
+      <ion-row id="{{ barbeiro.idFuncionario }}" class="avatarBarbeiro ion-justify-content-center ion-align-center" (click)="selecionarBarbeiro(barbeiro.idFuncionario)">
         <ion-col size="4">
             <ion-avatar>
                 <img src="../../../assets/icon/iconAvatar.png" />
