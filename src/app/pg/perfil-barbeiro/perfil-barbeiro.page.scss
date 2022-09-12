@@ -43,6 +43,12 @@ ion-avatar img
     text-align: justify;
     letter-spacing: 1px;
     line-height: 1.8em;
+    
+    &.subtitulo
+    {
+        font-size: .9em;
+        color: #808080;
+    }
 }
 
 .fundoSlider::before
