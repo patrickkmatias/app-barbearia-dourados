@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./pg/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'agende',
-    loadChildren: () => import('./pg/agende/agende.module').then( m => m.AgendePageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pg/login/login.module').then( m => m.LoginPageModule)
   },
@@ -29,7 +25,8 @@ const routes: Routes = [
   {
     path: 'perfil-barbeiro',
     loadChildren: () => import('./pg/perfil-barbeiro/perfil-barbeiro.module').then( m => m.PerfilBarbeiroPageModule)
-  },  {
+  },
+  {
     path: 'calendario',
     loadChildren: () => import('./pg/calendario/calendario.module').then( m => m.CalendarioPageModule)
   },
@@ -40,6 +37,10 @@ const routes: Routes = [
   {
     path: 'local',
     loadChildren: () => import('./pg/local/local.module').then( m => m.LocalPageModule)
+  },
+  {
+    path: 'servicos',
+    loadChildren: () => import('./pg/servicos/servicos.module').then( m => m.ServicosPageModule)
   }
 
 ];

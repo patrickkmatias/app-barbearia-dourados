@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { UrlService } from '../../servidor/url.service';
-import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { UrlService } from 'src/app/servidor/url.service';
 
 @Component({
-  selector: 'app-agende',
-  templateUrl: './agende.page.html',
-  styleUrls: ['./agende.page.scss'],
+  selector: 'app-servicos',
+  templateUrl: './servicos.page.html',
+  styleUrls: ['./servicos.page.scss'],
 })
-export class AgendePage implements OnInit {
+export class ServicosPage implements OnInit {
 
   servicos:any
 
@@ -36,7 +36,7 @@ export class AgendePage implements OnInit {
 
   listarServicos() {
 
-    this.http.get(this.servidorUrl.pegarUrl() + 'agende.php')
+    this.http.get(this.servidorUrl.pegarUrl() + 'servicos.php')
     .pipe(map(res => res))
     .subscribe(listaDados => {
       this.servicos = listaDados

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AgendePageRoutingModule } from './agende-routing.module';
+import { ServicosPageRoutingModule } from './servicos-routing.module';
 
-import { AgendePage } from './agende.page';
+import { ServicosPage } from './servicos.page';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,8 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     IonicModule,
     HttpClientModule,
-    AgendePageRoutingModule
+    ServicosPageRoutingModule
   ],
-  declarations: [AgendePage]
+  declarations: [ServicosPage]
 })
-export class AgendePageModule {}
+export class ServicosPageModule {}
