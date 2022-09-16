@@ -156,5 +156,8 @@
     "@ionic/angular-toolkit:page": {
       "styleext": "scss"
     }
-  }
+  },
+  "glob": "_redirects",
+  "input": "src/",
+  "output": "./"
 }
