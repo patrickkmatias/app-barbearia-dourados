@@ -4,6 +4,8 @@
 
 ###### *em desenvolvimento*
 
+[Acesse a alpha do app](https://app-barbearia-dourados.vercel.app/)
+
 ---
 
 ### a barbearia agora no seu bolso!
